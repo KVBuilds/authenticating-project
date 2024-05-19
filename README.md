@@ -1,36 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+The authentication project allows users to register, log in their credentials, and update their settings within their user profile.
 
-## Getting Started
+## Technology Stack
 
-First, run the development server:
+Overall summary of stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Runs on Nextjs and hosted on Vercel
+- Two-factor authentication, error handling, email verification
+- Next/server and middleware
+- Database includes Neon Serverless Postgres
+- Database client and workflow runs with Prisma
+- This example approach runs through pages as routes as compared to API as routes.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Learnings
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Some learnings while following along and building the project:
 
-## Learn More
+- Type definitions and imports: Found several instances where examples of NextAPIRequest and NextAPIResponse were missing. 
+- Handling of different providers: defined differences between OAuth and credentials provider to check specific logic applies only when needed. 
+- Configuration logic: Separating the configuration ('authConfig') from core logic helps with maintaining and readability. 
+- Error handling and data validation: Able to check that the application can handle missing or invalid data or if a user exists before accessing or moving forward.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
